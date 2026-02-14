@@ -55,4 +55,16 @@ Proje geliştirme sürecinde Yapay Zeka araçlarından, öğrenme sürecini dest
 
 * Senaryo Üretimi: Fonksiyonun karşılaşabileceği uç durumların (örneğin; dosyanın \n ile bitmemesi veya boş dosya okunması) teorik olarak listelenmesi.
 
+## ⭐️ Bonus Bölüm (Bonus Part)
+
+Proje, zorunlu gereksinimlere ek olarak Bonus bölümünü de kapsamaktadır. Bu bölüm şu özellikleri ekler:
+* **Tek Statik Değişken:** Tüm mantık, tek bir statik pointer dizisi (array of pointers) kullanılarak yönetilmiştir.
+* **Çoklu Dosya Yönetimi:** Fonksiyon, aynı anda birden fazla dosya tanımlayıcısını (file descriptor) yönetebilir. (Örneğin; önce fd 3'ten, sonra fd 4'ten, sonra tekrar fd 3'ten kaldığı yerden okuma yapabilir).
+
+### Bonus Derleme (Compilation)
+Bonus dosyalarını derlemek için şu komutu kullanabilirsiniz:
+
+```bash
+cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 main_bonus.c get_next_line_bonus.c get_next_line_utils_bonus.c
+```
 *Projenin tüm algoritma kurgusu, kod yazımı ve mantık akışı tarafımdan gerçekleştirilmiştir.*

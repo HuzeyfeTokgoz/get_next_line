@@ -1,6 +1,7 @@
 #include "get_next_line.h"
 #include <fcntl.h>
 #include <stdio.h>
+#include <unistd.h>
 
 int main(void)
 {
@@ -8,7 +9,7 @@ int main(void)
     char    *line;
     int     i = 1;
 
-    fd = open("test.txt", O_RDONLY | O_CREAT, 0777);
+    fd = open("file1.txt", O_RDONLY | O_CREAT, 0777);
     
     // Sonsuz döngü: Satır NULL gelene kadar (dosya bitene kadar) dön
     while (1)
