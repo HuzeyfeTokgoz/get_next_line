@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hutokgoz <hutokgoz@student.42kocaeli.com.t +#+  +:+       +#+        */
+/*   By: hutokgoz <hutokgoz@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 21:10:16 by hutokgoz          #+#    #+#             */
-/*   Updated: 2026/02/14 00:58:40 by hutokgoz         ###   ########.fr       */
+/*   Updated: 2026/02/17 16:36:15 by hutokgoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 char	*read_line(char *stash, int fd)
 {
-	char *buffer;
-	int read_size;
-	
+	char	*buffer;
+	int		read_size;
+
 	read_size = 1;
 	buffer = malloc(BUFFER_SIZE + 1);
 	if (!buffer)
 		return (NULL);
 	while ((!stash || !ft_strchr(stash, '\n')) && read_size != 0)
 	{
-		read_size = read(fd, buffer, BUFFER_SIZE);	
+		read_size = read(fd, buffer, BUFFER_SIZE);
 		if (read_size < 0)
 		{
 			free(buffer);
@@ -68,10 +68,10 @@ char	*extract_line(char *stash)
 
 char	*clean_stash(char *stash)
 {
-	char *temp; 
-	char *new_stash;
-	int i;
-	
+	char	*temp;
+	char	*new_stash;
+	int		i;
+
 	temp = ft_strchr(stash, '\n');
 	if (!temp)
 	{
@@ -94,11 +94,12 @@ char	*clean_stash(char *stash)
 	free (stash);
 	return (new_stash);
 }
+
 char	*get_next_line(int fd)
 {
-	static char *stash;
+	static char	*stash;
 	char		*line;
-	
+
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	stash = read_line(stash, fd);

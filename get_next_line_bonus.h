@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hutokgoz <hutokgoz@student.42kocaeli.com.t +#+  +:+       +#+        */
+/*   By: hutokgoz <hutokgoz@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 14:48:03 by hutokgoz          #+#    #+#             */
-/*   Updated: 2026/02/14 14:33:50 by hutokgoz         ###   ########.fr       */
+/*   Updated: 2026/02/17 16:38:41 by hutokgoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@
 #  define FD_MAX 4096
 # endif
 
-#include <stdlib.h>
+# include <stdlib.h>
 
-char 	*get_next_line(int fd);
-
+char	*get_next_line(int fd);
 char	*gnl_join(char *s1, char *s2);
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strlen(const char *s);

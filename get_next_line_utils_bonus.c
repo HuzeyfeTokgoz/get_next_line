@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hutokgoz <hutokgoz@student.42kocaeli.com.t +#+  +:+       +#+        */
+/*   By: hutokgoz <hutokgoz@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 14:48:01 by hutokgoz          #+#    #+#             */
-/*   Updated: 2026/02/14 14:30:59 by hutokgoz         ###   ########.fr       */
+/*   Updated: 2026/02/17 16:39:58 by hutokgoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*gnl_join(char *s1, char *s2)
 	str = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!str)
 		return (NULL);
-	i = -1;	
+	i = -1;
 	j = 0;
 	while (s1[++i])
 	{
@@ -40,6 +40,7 @@ char	*gnl_join(char *s1, char *s2)
 	free(s1);
 	return (str);
 }
+
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s != '\0')
@@ -50,6 +51,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;
