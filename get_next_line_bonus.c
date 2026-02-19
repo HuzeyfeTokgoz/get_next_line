@@ -6,7 +6,7 @@
 /*   By: hutokgoz <hutokgoz@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 21:10:16 by hutokgoz          #+#    #+#             */
-/*   Updated: 2026/02/17 16:37:19 by hutokgoz         ###   ########.fr       */
+/*   Updated: 2026/02/19 15:11:41 by hutokgoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ char	*extract_line(char *stash)
 
 	len = 0;
 	i = 0;
+	if (!stash[0])
+		return (NULL);
 	while (stash[len] != '\n' && stash[len] != '\0')
 		len++;
 	if (stash[len] == '\n')
@@ -91,7 +93,7 @@ char	*clean_stash(char *stash)
 		i++;
 	}
 	new_stash[i] = '\0';
-	free (stash);
+	free(stash);
 	return (new_stash);
 }
 
