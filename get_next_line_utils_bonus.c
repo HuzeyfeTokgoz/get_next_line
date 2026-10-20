@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
+
+static char	*gnl_copy(char *str, char *s1, char *s2);
 
 char	*gnl_join(char *s1, char *s2)
 {
@@ -36,7 +38,7 @@ char	*gnl_join(char *s1, char *s2)
 	return (str);
 }
 
-static char	*gnl_copy(char *str,char *s1,char *s2)
+static char	*gnl_copy(char *str, char *s1, char *s2)
 {
 	int	i;
 	int	j;

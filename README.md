@@ -19,7 +19,7 @@ Bu projede, bellek sızıntılarını önlemek ve veri bütünlüğünü korumak
 Proje, derleme aşamasında tampon boyutunun (Buffer Size) dışarıdan belirlenmesine olanak tanır. Projeyi test etmek veya derlemek için aşağıdaki bayrakları kullanmanız gerekmektedir:
 
 ```bash
-cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 main.c get_next_line.c get_next_line_utils.c
+cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 kendi_main.c get_next_line.c get_next_line_utils.c
 
 ```
 
@@ -65,6 +65,6 @@ Proje, zorunlu gereksinimlere ek olarak Bonus bölümünü de kapsamaktadır. Bu
 Bonus dosyalarını derlemek için şu komutu kullanabilirsiniz:
 
 ```bash
-cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 main_bonus.c get_next_line_bonus.c get_next_line_utils_bonus.c
+cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 kendi_main.c get_next_line_bonus.c get_next_line_utils_bonus.c
 ```
 *Projenin tüm algoritma kurgusu, kod yazımı ve mantık akışı tarafımdan gerçekleştirilmiştir.*
